@@ -1,87 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | [Challenge Name Here]</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <link href="css/style.css" rel="stylesheet">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Frontend Mentor | [Challenge Name Here]</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+
+    </style>
+
 </head>
+
 <body>
 
-  Social Media Dashboard
-  Total Followers: 23,004
+    <main class="container">
+        <div class="header">
+            <!-- header section -->
 
-  Dark Mode
+            <div class="header-left">
+                <h2>Social Media Dashboard</h2>
+                <h4>Total Followers: 23,004</h4>
+            </div>
 
-  
+            <hr>
 
-  @nathanf
-  1987
-  Followers
-  12 Today
+            <div class="header-right">
+                <h4>Dark Mode</h4>
+                <div class="toggle" onclick= "toggleThemes()">
+                    <div class="toggle-ball"></div>
+                    <div class="toggle-ball-hide"></div>
+                </div>
+            </div>
 
-  @nathanf
-  1044
-  Followers
-  99 Today
+        </div>
 
-  @realnathanf
-  11k
-  Followers
-  1099 Today
+        <div class="big-square-container">
 
-  Nathan F.
-  8239
-  Subscribers
-  144 Today
+            <div class="big-square facebook-box">
+                <p class="handle"><img src="images/icon-facebook.svg" alt="facebook icon" class="icon">@nathanf</p>
+
+                <div>
+                    <h2 class="big-square-h2">1987</h2>
+                    <h4 class="big-square-h4">Followers</h4>
+                </div>
+
+                <p class="big-square-trend"><img src="images/icon-up.svg" alt="arrow up" class="arrow">12 Today</p>
+            </div>
+
+            <div class="big-square twitter-box">
+                <p class="handle"><img src="images/icon-twitter.svg" alt="twitter icon" class="icon">@nathanf</p>
+
+                <div>
+                    <h2 class="big-square-h2">1044</h2>
+                    <h4 class="big-square-h4">Followers</h4>
+                </div>
+
+                <p class="big-square-trend"><img src="images/icon-up.svg" alt="arrow up" class="arrow">99 Today</p>
+            </div>
+
+            <div class="big-square instagram-box">
+                <p class="handle"><img src="images/icon-instagram.svg" alt="instagram icon" class="icon">@realnathanf</p>
+
+                <div>
+                    <h2 class="big-square-h2">11k</h2>
+                    <h4 class="big-square-h4">Followers</h4>
+                </div>
+
+                <p class="big-square-trend"><img src="images/icon-up.svg" alt="arrow up" class="arrow">1099 Today</p>
+            </div>
+
+            <div class="big-square-grid"></div>
+
+            <div class="big-square youtube-box">
+                <p class="handle"><img src="images/icon-youtube.svg" alt="youtube icon" class="icon">Nathan F.</p>
+
+                <div>
+                    <h2 class="big-square-h2">8239</h2>
+                    <h4 class="big-square-h4">subscribers</h4>
+                </div>
+
+                <p class="big-square-trend red-arrow"><img src="images/icon-down.svg" alt="arrow down" class="arrow">144 Today</p>
+            </div>
+
+        </div>
+
+        <div class="overview">
+            <h2 class="overview-text">Overview - Today</h2>
+        </div>
 
 
+        <div class="small-square-container">
 
-  Overview - Today
+            <div class="small-square">
+                <p class="small-square-text">Page Views</p>
+                <p class="small-square-icon"><img src="images/icon-facebook.svg" alt="facebook icon"></p>
+                <h3 class="small-square-number">87</h3>
+                <p class="small-square-arrow"><img src="images/icon-up.svg" alt="arrow up" class="arrow">3%</p>
+            </div>
 
-  Page Views
-  87
-  3%
+            <div class="small-square">
+                <p class="small-square-text">Likes</p>
+                <p class="small-square-icon"><img src="images/icon-facebook.svg" alt="facebook icon"></p>
+                <h3 class="small-square-number">52</h3>
+                <p class="small-square-arrow red-arrow"><img src="images/icon-down.svg" alt="arrow down" class="arrow">2%</p>
+            </div>
 
-  Likes
-  52
-  2%
+            <div class="small-square">
+                <p class="small-square-text">Likes</p>
+                <p class="small-square-icon"><img src="images/icon-instagram.svg" alt="instagram icon"></p>
+                <h3 class="small-square-number">5462</h3>
+                <p class="small-square-arrow"><img src="images/icon-up.svg" alt="arrow up" class="arrow">2257%</p>
+            </div>
 
-  Likes
-  5462
-  2257%
+            <div class="small-square">
+                <p class="small-square-text">Profile Views</p>
+                <p class="small-square-icon"><img src="images/icon-instagram.svg" alt="instagram icon"></p>
+                <h3 class="small-square-number">52k</h3>
+                <p class="small-square-arrow"><img src="images/icon-up.svg" alt="arrow up" class="arrow">1375%</p>
+            </div>
 
-  Profile Views
-  52k
-  1375%
+            <div class="small-square">
+                <p class="small-square-text">Retweets</p>
+                <p class="small-square-icon"><img src="images/icon-twitter.svg" alt="twitter icon"></p>
+                <h3 class="small-square-number">117</h3>
+                <p class="small-square-arrow"><img src="images/icon-up.svg" alt="arrow up" class="arrow">303%</p>
+            </div>
 
-  Retweets
-  117
-  303%
+            <div class="small-square">
+                <p class="small-square-text">Likes</p>
+                <p class="small-square-icon"><img src="images/icon-twitter.svg" alt="twitter icon"></p>
+                <h3 class="small-square-number">507</h3>
+                <p class="small-square-arrow"><img src="images/icon-up.svg" alt="arrow up" class="arrow">553%</p>
+            </div>
 
-  Likes
-  507
-  553%
+            <div class="small-square">
+                <p class="small-square-text">Likes</p>
+                <p class="small-square-icon"><img src="images/icon-youtube.svg" alt="youtube icon"></p>
+                <h3 class="small-square-number">107</h3>
+                <p class="small-square-arrow red-arrow"><img src="images/icon-down.svg" alt="arrow down" class="arrow">19%</p>
+            </div>
+            
+            <div class="small-square-grid"></div>
 
-  Likes
-  107
-  19%
+            <div class="small-square">
+                <p class="small-square-text">Total Views</p>
+                <p class="small-square-icon"><img src="images/icon-youtube.svg" alt="youtube icon"></p>
+                <h3 class="small-square-number">1407</h3>
+                <p class="small-square-arrow red-arrow"><img src="images/icon-down.svg" alt="arrow down" class="arrow">12%</p>
+            </div>
 
-  Total Views
-  1407
-  12%
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+        </div>
+        
+        <div class="bg-top"></div>
+
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="#">Bello Khalid</a>
+        </div>
+
+    </main>
+
+    <script src="js/main.js"></script>
+
 </body>
+
+
 </html>
