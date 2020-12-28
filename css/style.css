@@ -153,6 +153,7 @@ hr {
 .instagram-box {
 
     position: relative;
+    height: 15.9rem;
 }
 
 .instagram-box:nth-child(3):before {
